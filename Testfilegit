@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Script: greet_user.sh
+# Purpose: Ask user for their name and greet them.
+
+# Clear the screen
+clear
+
+# Prompt for user's name
+read -p "Enter your name: " username
+
+# Check if input is not empty
+if [[ -z "$username" ]]; then
+    echo "You didn't enter a name. Exiting..."
+    exit 1
+fi
+
+# Display greeting
+echo "Hello, $username! Welcome to your Linux terminal."
+
+# Optional: Display some system info
+echo "-----------------------------"
+echo "Today is: $(date)"
+echo "Hostname: $(hostname)"
+echo "Uptime: $(uptime -p)"
+echo "-----------------------------"
